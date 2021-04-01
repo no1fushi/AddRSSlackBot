@@ -2,4 +2,4 @@
 
 require './lib/bot'
 
-AddRSSlackBot::Bot.hello
+AddRSSlackBot::Bot.generate_feed

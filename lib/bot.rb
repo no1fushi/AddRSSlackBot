@@ -5,9 +5,10 @@ require 'feedbag'
 
 module AddRSSlackBot
   class Bot
-    def self.hello
-      line = gets.chomp
-      Feedbag.find line
+    def self.generate_feed
+      @url = gets.chomp
+      @feed = (Feedbag.find @url)[0]
+      print @feed
     end
   end
 end
