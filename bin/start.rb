@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-require './lib/bot'
+require './src/bot'
 
 AddRSSlackBot::Bot.generate_feed
