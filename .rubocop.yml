@@ -17,3 +17,6 @@ Style/BlockComments:
 Style/FrozenStringLiteralComment:
   Exclude:
     - 'spec/spec_helper.rb'
+
+Metrics/MethodLength:
+  Enabled: false
