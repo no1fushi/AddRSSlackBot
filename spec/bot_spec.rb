@@ -18,4 +18,9 @@ RSpec.describe 'generate_feed' do
     $stdin = StringIO.new('aaaa')
     expect(AddRSSlackBot::Bot.generate_feed).to eq(nil)
   end
+
+  it 'Strings other than URL format' do
+    $stdin = StringIO.new('aaa aaa')
+    expect(AddRSSlackBot::Bot.generate_feed).to eq(nil)
+  end
 end

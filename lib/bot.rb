@@ -7,8 +7,17 @@ module AddRSSlackBot
   class Bot
     def self.generate_feed
       @url = gets.chomp
-      @feed = (Feedbag.find @url)[0]
-      print @feed
+      begin
+        @feed = (Feedbag.find @url)[0]
+      rescue StandardError => e
+        puts "\n Class of error"
+        pp e.class
+        puts "\n Message of error"
+        pp e.message
+        puts "\n BackTrace of error"
+        pp e.backtrace
+        @feed = nil
+      end
     end
   end
 end
