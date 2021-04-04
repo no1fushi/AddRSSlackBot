@@ -2,4 +2,5 @@
 
 require './lib/bot'
 
-AddRSSlackBot::Bot.generate_feed
+bot = AddRSSlackBot::Bot.new('./config/token.toml')
+bot.send_massage
